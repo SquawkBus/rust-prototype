@@ -221,7 +221,7 @@ impl Options {
             \t--authorization none # the default
             \t--authorization basic <passwd-file>
             \t--authorization ldap <url>
-            \t--authorization-file <filename>
+            \t--authorizations-file <filename>
             \t--authorization <user:topic:entitlements:roles>
             "
         )

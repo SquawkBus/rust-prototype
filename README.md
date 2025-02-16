@@ -16,7 +16,7 @@ The only argument is a the path to a configuration file.
 The only argument is the location of the config file.
 
 ```bash
-RUST_LOG=debug cargo run --bin server -- -f /authorizations-simple.yaml
+RUST_LOG=debug cargo run --bin server -- --authorizations-file /authorizations-simple.yaml
 ```
 
 #### Start the server with TLS
@@ -25,10 +25,8 @@ The only argument is the location of the config file.
 
 ```bash
 RUST_LOG=debug cargo run --bin server -- \
-    --authorizations etc/authorizations-simple.yaml \
-    --tls \
-    --certfile $HOME/.keys/server.crt \
-    --keyfile $HOME/.keys/server.key
+    --authorizations-file etc/authorizations-simple.yaml \
+    --tls $HOME/.keys/server.crt $HOME/.keys/server.key
 ```
 
 ### Clients
